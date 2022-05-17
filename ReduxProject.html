@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    @import {createStore} from "redux";
+  </head>
+  <body>
+<button id = "add">+</button>
+<span id = "number"></span>
+<button id="minus">-</button>
+<script>
+const add = document.getElementById("add");
+  const minus = document.getElementById("minus");
+  const number = document.getElementById("number");
+  let count  = 0;
+  number.innerText = count;
+  const update = () => {  number.innerText = count;}
+  const handleAdd = () => {count++;  update()}
+    const handleMinus = () => {count--; update()}
+  add.addEventListener("click", handleAdd);
+  minus.addEventListener("click", handleMinus);
+</script>
+  </body>
+</html>
